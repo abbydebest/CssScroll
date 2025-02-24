@@ -1,7 +1,58 @@
+/* ///////////////////// */
+/* 🎞️🎞️🎞️ FONTFACES 🎞️🎞️🎞️ */
+/* ///////////////////// */
+
+/* SOURCE: https://www.charlotterohde.de/typefaces/new-edge-666 */
+@font-face {
+    font-family: "Edge Regular";
+    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-Regular.otf);
+}
+
+@font-face {
+    font-family: "Edge Regular Rounded";
+    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-RegularRounded.otf);
+}
+
+@font-face {
+    font-family: "Edge Semibold Rounded";
+    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-SemiboldRounded.otf);
+}
+
+@font-face {
+    font-family: "Edge Ultrabold Rounded";
+    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-UltraBoldRounded.otf);
+}
+
+
+/* ////////////////////// */
+/* 🍙🍙🍙 CSS REMEDY 🍙🍙🍙 */
+/* ////////////////////// */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    /* No margin & padding */
+    --no-margin: 0;
+
+    /* Colours */
+    --black: #1f1f1f;
+    --white: #ffffff;
+    --creme: seashell;
+
+    /* Fonts */
+    --edgeRegular: "Edge Regular", Arial, Helvetica, sans-serif;
+    --edgeRegularRound: "Edge Regular Rounded", Arial, Helvetica, sans-serif;
+    --edgeSemiRound: "Edge Semibold Rounded", Arial, Helvetica, sans-serif;
+    --edgeUltraRound: "Edge Ultrabold Rounded", Arial, Helvetica, sans-serif;
+
+    /* Font sizes mobile/small */
+    --h1-small: 0.8rem;
+    --p-small: 5rem;
 }
 
 body {
