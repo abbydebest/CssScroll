@@ -51,13 +51,44 @@
     --edgeUltraRound: "Edge Ultrabold Rounded", Arial, Helvetica, sans-serif;
 
     /* Font sizes mobile/small */
-    --h1-small: 0.8rem;
-    --p-small: 5rem;
+    --h1-small: 1rem;
+    --p-small: 4rem;
 }
 
 body {
     width: 100%;
     height: 100%;
+}
+
+p {
+    font-size: var(--p-small);
+}
+
+h1 {
+    font-size: var(--h1-small);
+}
+
+/* ////////////////// */
+/* 💬💬💬 HEADER 💬💬💬 */
+/* ////////////////// */
+@keyframes ticker {
+    0% {
+        transform: translateX(50vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+header {
+    width: 100vw;
+    height: fit-content;
+    background-color: red;
+}
+
+header div {
+    animation: ticker linear both;
+    animation-timeline: scroll(x);
 }
 
 body main section {
