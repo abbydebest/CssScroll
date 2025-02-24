@@ -5,22 +5,22 @@
 /* SOURCE: https://www.charlotterohde.de/typefaces/new-edge-666 */
 @font-face {
     font-family: "Edge Regular";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-Regular.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-Regular.otf);
 }
 
 @font-face {
     font-family: "Edge Regular Rounded";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-RegularRounded.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-RegularRounded.otf);
 }
 
 @font-face {
     font-family: "Edge Semibold Rounded";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-SemiboldRounded.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-SemiboldRounded.otf);
 }
 
 @font-face {
     font-family: "Edge Ultrabold Rounded";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-UltraBoldRounded.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-UltraBoldRounded.otf);
 }
 
 
@@ -67,3 +67,36 @@ body main section {
     height: 100vh;
     width: 100vw;
 }
+
+p{
+    font-family: "Edge Regular";
+}
+
+/* ////////////////////// */
+ /* 🌈 Chaning colors 🌈 */
+ /* ////////////////////// */
+ @keyframes colorChange {
+    0% {color: red; }
+    100% {color: yellow; }
+  }
+
+
+  @keyframes backGroundChange {
+    0% { background-color: yellow; }
+    100% { background-color: red; }
+  }
+
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    section:nth-of-type(2) p {
+      animation: colorChange linear;
+      animation-timeline: view();
+      animation-range: contain;
+    }
+
+    section:nth-of-type(2) {
+        animation: backGroundChange linear;
+        animation-timeline: scroll();
+    }
+  }
