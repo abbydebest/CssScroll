@@ -5,22 +5,22 @@
 /* SOURCE: https://www.charlotterohde.de/typefaces/new-edge-666 */
 @font-face {
     font-family: "Edge Regular";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-Regular.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-Regular.otf);
 }
 
 @font-face {
     font-family: "Edge Regular Rounded";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-RegularRounded.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-RegularRounded.otf);
 }
 
 @font-face {
     font-family: "Edge Semibold Rounded";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-SemiboldRounded.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-SemiboldRounded.otf);
 }
 
 @font-face {
     font-family: "Edge Ultrabold Rounded";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-UltraBoldRounded.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-UltraBoldRounded.otf);
 }
 
 
@@ -56,14 +56,43 @@
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 body main section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
 }
+
+p {
+    font-family: var(--edgeSemiRound);
+    size: var(--p-small);
+}
+
+/* ///////////////////// */
+/* 🪐🪐🪐 TEXT MOVE 🪐🪐🪐 */
+/* ///////////////////// */
+
+/* 🤠 Animation wave first span */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20vh);
+    }
+}
+
+section:nth-of-type(3) p {
+    display: inline-block;
+    animation: wave linear both;
+    animation-timeline: scroll();
+    /* animation-range: entry 0% cover 50%; */
+}
+
+
+
