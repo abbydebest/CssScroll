@@ -52,7 +52,7 @@
 
     /* Font sizes mobile/small */
     --h1-small: 0.8rem;
-    --p-small: 5rem;
+    --p-small: 3rem;
 }
 
 body {
@@ -70,33 +70,34 @@ body main section {
 
 p{
     font-family: "Edge Regular";
+    font-size: var(--p-small);
 }
 
 /* ////////////////////// */
  /* 🌈 Chaning colors 🌈 */
  /* ////////////////////// */
  @keyframes colorChange {
-    0% {color: red; }
-    100% {color: yellow; }
+    0% {color: yellow; }
+    50% {color: lightcyan; }
+    100%  {color: red; }
   }
 
 
   @keyframes backGroundChange {
-    0% { background-color: yellow; }
+    0% { background-color: lightcoral; }
     100% { background-color: red; }
   }
-
 
 
   @media (prefers-reduced-motion: no-preference) {
     section:nth-of-type(2) p {
       animation: colorChange linear;
-      animation-timeline: view();
+      animation-timeline: scroll();
       animation-range: contain;
     }
 
     section:nth-of-type(2) {
         animation: backGroundChange linear;
-        animation-timeline: scroll();
+        animation-timeline: view();
     }
   }
