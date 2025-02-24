@@ -5,22 +5,22 @@
 /* SOURCE: https://www.charlotterohde.de/typefaces/new-edge-666 */
 @font-face {
     font-family: "Edge Regular";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-Regular.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-Regular.otf);
 }
 
 @font-face {
     font-family: "Edge Regular Rounded";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-RegularRounded.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-RegularRounded.otf);
 }
 
 @font-face {
     font-family: "Edge Semibold Rounded";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-SemiboldRounded.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-SemiboldRounded.otf);
 }
 
 @font-face {
     font-family: "Edge Ultrabold Rounded";
-    src: url(../CssScroll/fonts/newEdge666/NewEdge666Test-UltraBoldRounded.otf);
+    src: url(../fonts/newEdge666/NewEdge666Test-UltraBoldRounded.otf);
 }
 
 
@@ -65,5 +65,49 @@ body main section {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    padding: 1em;
+    overflow: clip;
+}
+
+body main section:first-of-type {
+    min-height: 100vh;
+    height: 400vh;
+}
+
+p {
+    font-size: var(--p-small);
+    font-family: var(--edgeRegularRound);
+    text-align: center;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Animatie */
+    animation: letterStyle forwards linear;
+    animation-timeline: scroll();
+    animation-range: 0vh 300vh;
+}
+
+/* KEYFRAMES SECTION 1 */
+@keyframes letterStyle {
+    0%, 100% {
+        letter-spacing: 0;
+        width: 100%;
+        font-weight: 500;
+        font-style: normal;
+    }
+    25%, 75% {
+        letter-spacing: 0.6em;
+        width: 80%;
+        font-weight: 600;
+        font-style: italic;
+    }
+    50% {
+        letter-spacing: 0.8em;
+        font-weight: 900;
+        font-style: oblique;
+    }
 }
