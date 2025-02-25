@@ -72,23 +72,28 @@ h1 {
 /* 💬💬💬 HEADER 💬💬💬 */
 /* ////////////////// */
 @keyframes ticker {
-    0% {
-        transform: translateX(50vw);
+    from {
+        transform: translateX(0vw);
     }
-    100% {
-        transform: translateX(0);
+    to {
+        transform: translateX(50vw);
     }
 }
 
 header {
-    width: 100vw;
+    width: 200vw;
     height: fit-content;
     background-color: red;
 }
 
 header div {
-    animation: ticker linear both;
-    animation-timeline: scroll(x);
+    overflow-x: scroll;
+}
+
+header div h1 {
+    position: absolute;
+    animation: ticker linear forwards;
+    animation-timeline: scroll(inline nearest);
 }
 
 body main section {
