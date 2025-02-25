@@ -52,7 +52,7 @@
 
     /* Font sizes mobile/small */
     --h1-small: 0.8rem;
-    --p-small: 5rem;
+    --p-small: 3rem;
 }
 
 body {
@@ -109,5 +109,70 @@ p {
         letter-spacing: 0.8em;
         font-weight: 900;
         font-style: oblique;
+    }
+}
+
+
+p {
+    font-family: var(--edgeSemiRound);
+    font-size: var(--p-small);
+}
+
+/* ////////////////////// */
+/* 🌈 Chaning colors 🌈 */
+/* ////////////////////// */
+
+
+/* colors van de teks */
+@keyframes colorChange {
+    0% {
+        color: violet;
+    }
+
+    25% {
+        color: orange;
+    }
+
+    50% {
+        color: red;
+    }
+
+    75% {
+        color: yellow;
+    }
+
+    100% {
+        color: hotpink;
+    }
+}
+
+/* colors van de achtergrond */
+@keyframes backGroundChange {
+    0% {
+        background-color: hotpink;
+    }
+
+    50% {
+        background-color: lightblue;
+    }
+
+    100% {
+        background-color: lightcoral;
+    }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    section:nth-of-type(2) p {
+        animation: colorChange linear both;
+        animation-timeline: view();
+        animation-range: contain;
+        /* contain =  viewport volledig te zien */
+    }
+
+    section:nth-of-type(2) {
+        animation: backGroundChange reverse;
+        animation-timeline: scroll();
+        animation-range: contain;
     }
 }
