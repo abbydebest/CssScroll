@@ -76,19 +76,44 @@ p {
 /* ////////////////////// */
 /* 🌈 Chaning colors 🌈 */
 /* ////////////////////// */
+
+
+/* colors van de teks */
 @keyframes colorChange {
-    0% { color: violet; }  
-    25% { color: orange; }  
-    50% { color: red; }  
-    75% { color: yellow; }  
-    100% { color: hotpink; }  
+    0% {
+        color: violet;
+    }
+
+    25% {
+        color: orange;
+    }
+
+    50% {
+        color: red;
+    }
+
+    75% {
+        color: yellow;
+    }
+
+    100% {
+        color: hotpink;
+    }
 }
 
-
+/* colors van de achtergrond */
 @keyframes backGroundChange {
-    0% { background-color: hotpink; }
-    50% { background-color: lightblue;}
-    100%  { background-color: lightcoral; }
+    0% {
+        background-color: hotpink;
+    }
+
+    50% {
+        background-color: lightblue;
+    }
+
+    100% {
+        background-color: lightcoral;
+    }
 }
 
 
@@ -97,7 +122,7 @@ p {
         animation: colorChange linear both;
         animation-timeline: view();
         animation-range: contain;
-        /* contain is als het volledig in het viewport te zien is */
+        /* contain =  viewport volledig te zien */
     }
 
     section:nth-of-type(2) {
