@@ -68,36 +68,41 @@ body main section {
     width: 100vw;
 }
 
-p{
-    font-family: "Edge Regular";
+p {
+    font-family: var(--edgeSemiRound);
     font-size: var(--p-small);
 }
 
 /* ////////////////////// */
- /* 🌈 Chaning colors 🌈 */
- /* ////////////////////// */
- @keyframes colorChange {
-    0% {color: yellow; }
-    50% {color: lightcyan; }
-    100%  {color: red; }
-  }
+/* 🌈 Chaning colors 🌈 */
+/* ////////////////////// */
+@keyframes colorChange {
+    0% { color: violet; }  
+    25% { color: orange; }  
+    50% { color: red; }  
+    75% { color: yellow; }  
+    100% { color: hotpink; }  
+}
 
 
-  @keyframes backGroundChange {
-    0% { background-color: lightcoral; }
-    100% { background-color: red; }
-  }
+@keyframes backGroundChange {
+    0% { background-color: hotpink; }
+    50% { background-color: lightblue;}
+    100%  { background-color: lightcoral; }
+}
 
 
-  @media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
     section:nth-of-type(2) p {
-      animation: colorChange linear;
-      animation-timeline: scroll();
-      animation-range: contain;
+        animation: colorChange linear both;
+        animation-timeline: view();
+        animation-range: contain;
+        /* contain is als het volledig in het viewport te zien is */
     }
 
     section:nth-of-type(2) {
-        animation: backGroundChange linear;
-        animation-timeline: view();
+        animation: backGroundChange reverse;
+        animation-timeline: scroll();
+        animation-range: contain;
     }
-  }
+}
