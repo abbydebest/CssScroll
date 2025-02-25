@@ -52,7 +52,7 @@
 
     /* Font sizes mobile/small */
     --h1-small: 0.8rem;
-    --p-small: 5rem;
+    --p-small: 4rem;
 }
 
 body {
@@ -64,13 +64,13 @@ body main section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh;
-    width: 100vw; */
+    height: 200vh;
+    width: 100vw;
 }
 
 p {
     font-family: var(--edgeSemiRound);
-    size: var(--p-small);
+    font-size: var(--p-small);
 }
 
 /* ///////////////////// */
@@ -80,18 +80,20 @@ p {
 /* 🤠 Animation wave first span */
 @keyframes wave {
     0%, 100% {
-        transform: translateY(0);
+        transform: rotate(0);
+        letter-spacing: normal;
     }
     50% {
-        transform: translateY(-20vh);
+        transform: rotate(360deg);
+        letter-spacing: 0.5em;
     }
 }
 
 section:nth-of-type(3) p {
     display: inline-block;
     animation: wave linear both;
-    animation-timeline: scroll();
-    /* animation-range: entry 0% cover 50%; */
+    animation-timeline: view();
+    animation-range: 10vh 90vh;
 }
 
 
