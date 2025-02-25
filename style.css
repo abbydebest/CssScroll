@@ -56,15 +56,15 @@
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 body main section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     padding: 1em;
     overflow: clip;
@@ -176,3 +176,34 @@ p {
         animation-range: contain;
     }
 }
+
+p {
+    font-family: var(--edgeSemiRound);
+    font-size: var(--p-small);
+}
+
+/* ///////////////////// */
+/* 🪐🪐🪐 TEXT MOVE 🪐🪐🪐 */
+/* ///////////////////// */
+
+/* 🤠 Animation wave first span */
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0);
+        letter-spacing: normal;
+    }
+    50% {
+        transform: rotate(360deg);
+        letter-spacing: 0.5em;
+    }
+}
+
+section:nth-of-type(3) p {
+    display: inline-block;
+    animation: wave linear both;
+    animation-timeline: view();
+    animation-range: 10vh 90vh;
+}
+
+
+
